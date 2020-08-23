@@ -1,0 +1,41 @@
+button{
+    color: black;
+   
+    
+}
+.icon{
+    color: blue;
+    font-size: 40px;
+    margin-right: 48%;
+    margin-top: 154px;
+}
+.bt{
+    
+    margin-top: 50%;
+    float: right;
+    
+}
+
+ul,
+li {
+      
+      width: 100%;
+      padding: 0;
+      list-style: none;
+}
+
+#file-label {
+      display: inline-flex;
+      vertical-align: middle;
+      font-size: 12px;
+      line-height: 18px;
+}
+
+#file-label mat-icon {
+      font-size: 18px;
+      text-align: center;
+}
+
+#file-label a {
+      cursor: pointer;
+}

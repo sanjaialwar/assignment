@@ -1,0 +1,19 @@
+.container {
+    margin-left: 275px;
+  }
+  
+  .header {
+   width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    
+  }
+  
+  .mat-table {
+    margin-left: 0%;
+    width: 100%;
+
+  }
+  

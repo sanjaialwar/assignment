@@ -1,0 +1,19 @@
+<div style="height: 300px;width: 400px;">
+  <h2 mat-dialog-title>Upload File</h2>
+  <mat-dialog-content style="height: 200px;">
+    <ul style="padding-left: 0px;">
+      <app-drag-drop></app-drag-drop>
+    </ul>
+    <div class="alert" *ngIf='upload'>
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      <strong>Success!</strong> File successfully uploaded!!!
+    </div>
+    <br />
+    <input type="file" id="fileUpload" (change)="uploadFile($event)" name="fileUpload" accept="{{accept}}"
+      style="display:none;" />
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button mat-dialog-close>Cancel</button>
+    <button mat-stroked-button cdkFocusInitial (click)="onClick()">{{text}}</button>
+  </mat-dialog-actions>
+</div>

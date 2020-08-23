@@ -1,0 +1,44 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+
+    <mat-toolbar style="padding-left: 0px; height: 8%;">
+      <img style="margin-left: 0px;" width="200" alt="Angular Logo" src="assets/767623.png" />
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home" routerLinkActive="active">
+        <mat-icon>home</mat-icon>
+        <span style="margin-left:10px;">Home</span>
+      </a>
+
+      <a mat-list-item routerLink="/app-dash">
+        <mat-icon>dashboard</mat-icon>
+        <span style="margin-left:10px;">Dashboard</span>
+      </a>
+
+      <a mat-list-item routerLink="/app-table">
+        <mat-icon>people</mat-icon>
+        <span style="margin-left:10px;">Employees</span>
+      </a>
+
+      <a mat-list-item routerLink="/app-browse">
+        <mat-icon>file_upload</mat-icon>
+        <span style="margin-left:10px;">Upload File</span>
+      </a>
+      <a mat-list-item routerLink="/app-form">
+        <mat-icon>add_circle_outline</mat-icon>
+        <span style="margin-left:10px;">Add Employee</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>

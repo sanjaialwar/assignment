@@ -1,0 +1,28 @@
+.grid-container {
+  margin-left: 13%;
+  margin-top: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.more-icon {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center !important;
+  
+}
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: #ccdf62;
+}
+::ng-deep .mat-progress-bar-buffer {
+  background: #eee7e7;
+}

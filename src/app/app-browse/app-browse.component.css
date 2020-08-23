@@ -1,0 +1,40 @@
+button{
+    color: #5796fcfa;
+}
+
+.icon{
+    color: #5796fcfa;
+    font-size: 20px;
+    
+    
+}
+.bt{
+    margin-left: 48%;
+    margin-top: 10%;
+    
+}
+
+ul,
+li {
+      
+      width: 100%;
+      padding: 0;
+      list-style: none;
+      
+}
+
+#file-label {
+      display: inline-flex;
+      vertical-align: middle;
+      font-size: 12px;
+      line-height: 18px;
+}
+
+#file-label mat-icon {
+      font-size: 12px;
+      text-align: center;
+}
+
+#file-label a {
+      cursor: pointer;
+}
