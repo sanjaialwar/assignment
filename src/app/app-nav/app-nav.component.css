@@ -1,0 +1,28 @@
+.sidenav-container {
+  height: 8%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: #292929;
+}
+
+.mat-toolbar.mat-primary {
+  
+  top: 0;
+  z-index: 1;
+  background: #292929;
+}
+
+.upload {
+  font-size: small;
+  font-weight: 300;
+  color: white;
+}
+.upload:hover{
+  text-decoration: none;
+  color: #cccccc;
+}

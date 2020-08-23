@@ -1,0 +1,76 @@
+<div class='row'>
+    <div class='col-md-4'></div>
+    <div class='col-md-4' style="margin:20px;">
+        <div style="margin: 20px;text-align: center;">
+            <b>Employee Registration Form</b>
+        </div>
+        <form [formGroup]="usersForm" (ngSubmit)="onSubmit()">
+
+            <mat-form-field style="width: 100%;" appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" required>
+            </mat-form-field>
+            <span *ngIf="(name.touched) || name.dirty">
+                <small *ngIf="name.errors?.required" class="text-danger">Name is required</small>
+            </span>
+
+            <br>
+            <div style="width: 100%;margin-top: 10px;">
+                <mat-label>Role:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </mat-label>
+                <mat-radio-group color="primary" formControlName="role" required>
+                    <mat-radio-button value="Clerk">Clerk</mat-radio-button>
+                    <mat-radio-button value="HR">HR</mat-radio-button>
+                    <mat-radio-button value="Tech">Tech</mat-radio-button>
+                    <mat-radio-button value="Designer">Designer</mat-radio-button>
+                </mat-radio-group>
+                <span *ngIf="(role.touched) || role.dirty">
+                    <small *ngIf="role.errors?.required" class="text-danger">Role is required</small>
+                </span>
+            </div>
+
+            <br>
+
+            <mat-form-field style="width: 100%;" appearance="outline">
+                <mat-label>Mail</mat-label>
+                <input [class.is-invalid]="usersForm.get('email').invalid && usersForm.get('email').touched"
+                    type="email" matInput formControlName="email" required>
+
+            </mat-form-field>
+            <span *ngIf="(email.invalid && email.touched) || email.dirty">
+                <small *ngIf="email.errors?.required" class="text-danger">Email is required</small>
+                <small *ngIf="email.errors?.pattern" class="text-danger">Please provide a valid email address</small>
+            </span>
+
+            <br>
+
+            <mat-form-field style="width: 100%;" appearance="outline">
+                <mat-label>Location</mat-label>
+                <mat-select formControlName="location" required>
+                    <mat-option value="Bangalore">Bangalore</mat-option>
+                    <mat-option value="Chennai">Chennai</mat-option>
+                    <mat-option vlaue="Gurgaon">Gurgaon</mat-option>
+                    <mat-option value="Kolkata">Kolkata</mat-option>
+                    <mat-option value="Mumbai">Mumbai</mat-option>
+                    <mat-option value="Pune">Pune</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <span *ngIf="(location.invalid && location.touched) || location.dirty">
+                <small *ngIf="location.errors?.required" class="text-danger">Location is required</small>
+                <small *ngIf="location.errors?.pattern" class="text-danger">Please provide a valid Location</small>
+            </span>
+
+            <br>
+            <div class="alert" *ngIf='submitted' id="success">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <strong>Success!</strong> Form Submitted
+            </div>
+
+            <div style="margin-top: 10px;">
+                <button mat-stroked-button #subbtn color="primary" type="submit" [disabled]="!usersForm.valid"
+                    style="margin-left: 45%;">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class='col-md-4'></div>
+
+</div>

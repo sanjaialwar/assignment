@@ -1,0 +1,8 @@
+<ul style="padding-left: 0px;">
+    <li *ngFor="let file">
+        <h3>Successfully Uploaded</h3>
+    </li>
+</ul>
+
+<lib-drag-drop-file (filesDropped)="drop($event)" (change)="onFileChange($event)" [lable]="'Upload file here'">
+</lib-drag-drop-file>
